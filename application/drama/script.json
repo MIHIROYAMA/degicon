@@ -1,0 +1,122 @@
+{
+  "chapter": 1,
+  "title": "街角の午後",
+  "description": "1985年風の導入。視聴者と主人公が出会い、関係を築く4往復の対話。選択肢は2択で分岐の下地を作る。",
+  "metadata": {
+    "video_mapping": {
+      "idle": "videos/idle.mp4",
+      "smile": "videos/smile.mp4",
+      "serious": "videos/serious.mp4",
+      "sad": "videos/sad.mp4",
+      "surprised": "videos/surprised.mp4",
+      "transition": "videos/transition.mp4"
+    }
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "type": "narration",
+      "speaker": "narrator",
+      "text": "午後の街角。埃混じりの光が窓を叩く──古いブラウン管が静かに息をしている。",
+      "emotion": "idle",
+      "next": "s2"
+    },
+    {
+      "id": "s2",
+      "type": "line",
+      "speaker": "character",
+      "name": "亜紀（Aki）",
+      "text": "あら、来たのね。こんなところで顔を見るなんて、何だか運命みたいじゃない？",
+      "emotion": "smile",
+      "voice_style": "やや甘く、落ち着いたトーン",
+      "next": "choice1"
+    },
+    {
+      "id": "choice1",
+      "type": "choice",
+      "prompt": "あなたはどう応える？（選択肢を声で選んでください）",
+      "options": [
+        {
+          "option_id": "c1",
+          "text": "あなたに会いに来た",
+          "suggested_user_phrases": ["会いに来たよ","君に会いに来たんだ"]
+        },
+        {
+          "option_id": "c2",
+          "text": "偶然通りかかっただけ",
+          "suggested_user_phrases": ["偶然だよ","たまたま通りかかったんだ"]
+        }
+      ]
+    },
+    {
+      "id": "s3_c1",
+      "type": "line",
+      "speaker": "character",
+      "name": "亜紀",
+      "text": "そう……嬉しい。あなたが来るって、どこかで感じていたのかもしれないわ。",
+      "emotion": "serious",
+      "next": "s4"
+    },
+    {
+      "id": "s3_c2",
+      "type": "line",
+      "speaker": "character",
+      "name": "亜紀",
+      "text": "そうなのね。偶然って、時に残酷で、時に優しいものよね。",
+      "emotion": "sad",
+      "next": "s4"
+    },
+    {
+      "id": "s4",
+      "type": "line",
+      "speaker": "character",
+      "name": "亜紀",
+      "text": "ねえ、あなた。昔のことをひとつだけ、教えてくれない？　忘れられない夕焼けのこと――",
+      "emotion": "serious",
+      "next": "choice2"
+    },
+    {
+      "id": "choice2",
+      "type": "choice",
+      "prompt": "あなたは何を話す？",
+      "options": [
+        {
+          "option_id": "c3",
+          "text": "きれいな夕焼けを見た話",
+          "suggested_user_phrases": ["忘れられない夕焼けがある","あの日の夕焼けは赤かった"]
+        },
+        {
+          "option_id": "c4",
+          "text": "何も覚えていないと答える",
+          "suggested_user_phrases": ["覚えてない","思い出せないよ"]
+        }
+      ]
+    },
+    {
+      "id": "s5_c3",
+      "type": "line",
+      "speaker": "character",
+      "name": "亜紀",
+      "text": "その夕焼け、私も知っている気がする。あなたと交わした約束が、どこかで残っているのかも。",
+      "emotion": "smile",
+      "next": "end_scene"
+    },
+    {
+      "id": "s5_c4",
+      "type": "line",
+      "speaker": "character",
+      "name": "亜紀",
+      "text": "そう。忘れることも、一つの答えね。ならば新しい何かを始めましょうか。",
+      "emotion": "smile",
+      "next": "end_scene"
+    },
+    {
+      "id": "end_scene",
+      "type": "narration",
+      "speaker": "narrator",
+      "text": "風が通り抜ける。小さな決意が、古い街角に静かに落ちる──次章へ続く。",
+      "emotion": "transition",
+      "next_chapter": 2
+    }
+  ]
+}
