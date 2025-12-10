@@ -1,0 +1,3 @@
+python-vlc
+sounddevice
+numpy
