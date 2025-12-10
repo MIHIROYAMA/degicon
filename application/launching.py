@@ -192,15 +192,12 @@ def main():
 	print('起動スクリプトを開始します...')
 	file_check()
 
-	# VLC インスタンス
-	# verbose file logging を有効にして vlc_log.txt を出力する
-	vlc_log = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'vlc_log.txt'))
+	# VLC インスタンス（ファイル出力ログは無効化）
 	try:
-		instance = vlc.Instance(['--verbose=2', '--file-logging', f'--logfile={vlc_log}'])
+		instance = vlc.Instance()
 	except Exception as e:
 		print('VLC インスタンスの作成に失敗しました:', e)
 		instance = None
-	print(f'vlc log file: {vlc_log}')
 
 	# libVLC バージョン確認
 	try:
